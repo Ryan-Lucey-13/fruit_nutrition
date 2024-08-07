@@ -1,0 +1,186 @@
+.Container {
+	display: grid;
+	grid-template-columns: 1fr 8fr 1fr 1fr 1fr;
+	grid-template-rows: 110px 25px 1fr;
+	width: 100%;
+	height: 100vh;
+}
+.NavBar {
+	grid-column: 1/span 5;
+	grid-row: 1;
+	background-color: #606676;
+	margin-top: -10px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: 10px;
+	box-shadow: 0 4px 2px -2px black;
+}
+.Chart-title {
+	margin-top: auto;
+	margin-bottom: auto;
+	grid-column: 2;
+	grid-row: 1;
+	color: #BEC6A0;
+	font-family: copperplate;
+	font-size: 50px;
+	text-shadow: 1px 1px 2px #000;
+}
+.BarChart-bar {
+	display: flex;
+	width: 110px;
+	border: 1px black solid;
+	align-self: flex-end;
+	flex-direction: column;
+	text-align: center;
+	background-color: #708871;
+	color: #FEF3E2;
+	padding: 5px;
+	font-size: 20px;
+	text-shadow: 1px 1px 2px #606676;
+	box-shadow: 5px 0px 5px #BEC6A0;
+	margin-right: 10px;
+	transition: height 0.5s;
+}
+.Sidebar-label {
+	position: relative;
+	display: inline-block;
+	grid-column: 4;
+	grid-row: 1;
+	margin-top: 10px;
+}
+#name-input {
+	height: 25px;
+	width: 150px; 
+	padding: 0 10px;
+	border: 1px solid #BEC6A0;
+	border-radius: 5px;
+	font-size: 16px;
+	box-sizing: border-box;
+	background-color: #FEF3E2;
+	color: #606676;
+}
+.input-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	grid-column: 4;
+	grid-row: 1;
+	height: 25px;
+	width: 40px;
+	background-color: #708871;
+	border-radius: 5px;
+	border: 1px solid #BEC6A0;
+	color: #FEF3E2;
+	transition: background-color 0.5s;
+}
+.input-button:hover {
+	background-color: #BEC6A0;
+}
+#choices {
+	grid-column: 3;
+	grid-row: 1;
+	height: 25px;
+	margin-top: 10px;
+	background-color: #FEF3E2;
+	border: 1px solid #BEC6A0;
+	border-radius: 5px;
+	color: #636c72;
+	font-family: Arial;
+	font-size: 15px;
+}
+#buttons {
+	display: flex;
+	flex-direction: row;
+	grid-column: 2/span 3;
+	grid-row: 2;
+}
+.fruit-button {
+	background-color: #BEC6A0;
+	color: #FEF3E2;
+	text-shadow: 1px 1px 1px #708871;
+	border-radius: 5px;
+	border: 1px solid #606676;
+	transition: background-color 0.5s;
+}
+.fruit-button:hover {
+	background-color: #708871;
+	color: #FEF3E2;
+}
+.BarChart-bar:nth-child(even) {
+	background-color: #BEC6A0;
+	box-shadow: 5px 0px 5px #708871;
+}
+.BarChart-img {
+	align-self: center;
+	margin-top: 5px;
+	height: 75px;
+	width: 75px;
+}
+.BarChart-bar:hover .BarChart-img{
+	position: relative;
+	animation: moveToBottom 2.5s ease-in 1;
+	animation-fill-mode: backwards;
+	top: 50%;
+}
+.MainContent{
+	display: flex;
+	grid-column: 2/ span 3;
+	grid-row: 3;
+}
+#results {
+	display: flex;
+}
+.apple {
+	grid-column: 2;
+	grid-row: 2;
+}
+.apple:hover {
+	background-color: #E72929;
+	transition: background-color 1s;
+}
+.banana {
+	grid-column: 3;
+	grid-row: 2;
+}
+.banana:hover {
+	background-color: #FFD35A;
+	transition: background-color 1s;
+}
+.orange {
+	grid-column: 4;
+	grid-row: 2;
+}
+.orange:hover {
+	background-color: #FFB200;
+	transition: background-color 1s;
+}
+
+.strawberry {
+	grid-column: 5;
+	grid-row: 2;
+}
+.strawberry:hover {
+	background-color: #E4003A;
+	transition: background-color 1s;
+}
+
+.kiwi {
+	grid-column: 6;
+	grid-row: 2;
+}
+.kiwi:hover {
+	background-color: #88D66C;
+	transition: background-color 1s;
+}
+
+body {
+	background-color: #FEF3E2;
+}
+@keyframes moveToBottom {
+	from {
+		top: 0;
+	}
+	to {
+		top: 50%;
+	}
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit</title>
+    <link rel="stylesheet" href="static/site.css">
+  </head>
+  <body>
+    <div class="Container">
+      <div class="NavBar">
+      </div>
+      <select id="choices">
+          <option value="calories">Calories</option>
+          <option value="carbs">Carbs</option>
+          <option value="sugar">Sugar</option>
+      </select>
+      <div class="Sidebar-label">
+        <input class="Input" id="name-input" placeholder="Enter Fruit..." />
+        <button class="input-button" onClick="render()">Add</button>
+      </div>
+      
+      <h1 class="Chart-title">Fruit Macros</h1>
+        <div id="buttons">
+            
+        </div>
+        <div class="MainContent">
+          <div id="results">
+
+          </div>
+        </div>
+    </div>
+    <script src="./static/main.js"></script>
+  </body>
+</html>
